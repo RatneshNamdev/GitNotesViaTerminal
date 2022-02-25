@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Git Notes</title>
+</head>
+<body>
+	<pre>
+		Git :
+		=====
+Check git : 	brew -v (or) 
+
+			git version (or)
+			git --version
+
+Configure git account :  git config --global user.email "ratnesh.mygithub@gmail.com"
+					git config --global user.name "RatneshNamdev"
+
+Set folder path : cd /Users/aaa/Desktop/myCodeWithGit 
+
+Initialise local repo : git init
+		      =>       Initialized empty Git repository in /Users/aaa/Desktop/myCodeWithGit/.git/ 
+
+To shown hide folder : defaults write com.apple.finder AppleShowAllFiles YES
+IF Hide again then :     defaults write com.apple.finder AppleShowAllFiles NO
+			Than :  press “option” key + “command” key and right click to Finder and click on relaunch .	
+
+Check Status :  git status
+		=>     On branch master  “\n”  No commits yet “\n” nothing to commit (create/copy files and use "git add" to track)			
+
+**Create file :  touch test1.txt
+
+Check Status :  git status
+		=>      On branch master
+			  Untracked files:  (use "git add <file>..." to include in what will be committed) test1.txt
+                           nothing added to commit but untracked files present (use "git add" to track)    
+
+Adding on staging area :  git add  “file-name with extension”.
+
+Checking status :  git status 
+		=>       :  Now it’s added successfully 
+
+Save file on loc repo :   git commit -m “any message can give here…!!”
+			=>      :   [master (root-commit) 6475425] added test1.txt files..
+
+Checking status : git status 
+	            =>   :  On branch master “\n” nothing to commit, working tree clean .
+
+Then let us make some changes on test1.txt files….
+
+Then let us also create a new file over here…..    
+
+Create file :  touch git-note.html
+
+Checking status : git status 
+		=>       : On branch master “\n” Changes not staged for commit:
+  			     (use "git add <file>..." to update what will be committed)
+                             (use "git checkout -- <file>..." to discard changes in working directory)
+
+			    modified:   test1.txt
+	
+			   Untracked files:
+ 			   (use "git add <file>..." to include in what will be committed) “\n” \git-note.html
+			   no changes added to commit (use "git add" and/or "git commit -a")    
+
+So Now We need add them all changes :  So, here supposed if we have multiple files <br> or changes that we have not added so far so in that case we can also able to use diff.<br> Way of adding files like 1) “git add *.txt” (so using this we can add all txt files of the project) “or” <br>2) “git add *.* ” (so using this we can get added every file in project) “or” and<br> 3) “git add . ”  (so using this we can get every things with in that particular project) .
+
+Adding changes : git add . 
+
+Checking status :  git status 
+		=>       :  On branch master  “\n” Changes to be committed:
+			      (use "git reset HEAD <file>..." to unstage)
+
+				new file:   git-note.html
+				modified:   test1.txt
+
+Now save that change : git commit -m “adding git-note.html  |  modified test1.txt files…” 
+
+	</pre>
+</body>
+</html>
