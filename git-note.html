@@ -6,9 +6,9 @@
 <body>
 	<pre>
 		Git :
-		=====
-Check git : 	brew -v (or) 
+=====
 
+Check git : 	brew -v (or) 
 			git version (or)
 			git --version
 
@@ -62,7 +62,11 @@ Checking status : git status
  			   (use "git add <file>..." to include in what will be committed) “\n” \git-note.html
 			   no changes added to commit (use "git add" and/or "git commit -a")    
 
-So Now We need add them all changes :  So, here supposed if we have multiple files <br> or changes that we have not added so far so in that case we can also able to use diff.<br> Way of adding files like 1) “git add *.txt” (so using this we can add all txt files of the project) “or” <br>2) “git add *.* ” (so using this we can get added every file in project) “or” and<br> 3) “git add . ”  (so using this we can get every things with in that particular project) .
+So Now We need add them all changes :  So, here supposed if we have multiple files or changes that we have not added 
+						so far so in that case we can also able to use diff. Way of adding files like 1) “git add *.txt” 
+						(so using this we can add all txt files of the project) “or” 2) “git add *.* ” (so using this we can
+						 get added every file in project) “or” and 3) “git add . ”  (so using this we can get every things 
+						with in that particular project) .
 
 Adding changes : git add . 
 
@@ -74,6 +78,20 @@ Checking status :  git status
 				modified:   test1.txt
 
 Now save that change : git commit -m “adding git-note.html  |  modified test1.txt files…” 
+			=>         :  [master 1e9aa53] “\n” 1 file changed, 2 insertions(+)
+Checking status : git status
+		=>       : On branch master  “\n”  nothing to commit, working tree clean
+
+Now we need go the remote repo loc : git remote add origin https://github.com/RatneshNamdev/GitNotesViaTerminal.git
+
+Then we need push the local repo to remote : git push -u origin master(it’s branch)
+							=>       if it’s throws error than goto > Launchpad > search Keychain Access and open > 
+							double click  GitHub.com > click show password > put the system password > 
+                                                          paste the token of GitHub > click save changes.
+
+Than again run the same cmd :  git push -u origin master
+
+Then refresh the browser and see the updation…..!!
 
 	</pre>
 </body>
